@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+  </head>
+  <script type="text/javascript" src="./js/font.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script type="text/javascript">
+  $(function(){
+
+    // 图片预览--------------
+    var imgsurl=[];
+    var nowurl='';
+    var imgObj=$(".imgWorks");
+    for(var i=0;i<imgObj.length;i++){
+        imgsurl[i]=imgObj[i].src;
+        imgObj[i].onclick=function(){
+            nowurl=this.src;
+            console.log(nowurl);
+            wx.previewImage({
+                current: nowurl,
+                urls: imgsurl
+            });
+        }
+    }
+  })
+
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !important;
+    }
+    a{
+      text-decoration: none;
+    }
+    section{
+      width: 100%;
+    }
+    .clearBox{clear:both;}
+    .frame{
+    	padding-top: 0.37rem;
+    }
+    /* 加号 设置 */
+    .navx{
+    	width: 100%-0.44rem;
+    	height: 0.22rem;
+    	padding-right: 0.44rem;
+    	margin-bottom: 0.34rem;
+    }
+    .imgadd,.imgset{
+    	width: 0.22rem;
+    	height: 0.22rem;
+    	float: right;
+    	margin-left:0.18rem;
+    }
+    /* 个人信息 */
+    .personMsg{
+    	height: 0.96rem;
+    	width: 100%-0.68rem;
+    	padding: 0rem 0rem 0.78rem 0.68rem;
+    	display: flex;
+    }
+    .imgpersonhead{
+    	display: block;
+    	width: 0.96rem;
+    	height: 0.96rem;
+    	border-radius: 50%;
+    	margin-right: 0.25rem;
+    }
+    .personInfo{
+
+    }
+    .name{
+    	padding: 0.1rem 0rem 0.14rem 0rem;
+    	font-size: 0.26rem;
+    }
+    .guanzhu{
+    	display: inline-block;
+    	margin-right: 0.44rem;
+    }
+    /* 选显卡 控制卡 */
+    .cardBox{
+    	display: flex;
+    	justify-content: space-around;
+    	padding: 0px 0.5rem 0.17rem 0.5rem;
+    }
+    .item{
+    	display: block;
+    	width: 0.98rem;
+    	height: 0.5rem;
+    	border-radius: 5px;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    }
+    .item img{
+    	width: 0.26rem;
+    	height: 0.26rem;
+    }
+    .itemActive{
+    	background: #f2f2f2;
+    }
+    /* 选显卡 显示卡 */
+    /* 选项卡  个人页面*/
+    .cardBoxShow{
+    	display: none;
+    	background-color: #ececec;
+    	padding: 0.1rem 0.1rem 2rem 0.1rem;
+    }
+    .cardBoxActive{
+      display: block;
+    }
+    /* 选项卡  横版作品*/
+    .cardBoxNoPadding{
+    	padding-left: 0rem;
+    	padding-right: 0rem;
+    }
+    .works{
+    	padding: 0.14rem 0rem 0.2rem 0.14rem;
+    	display: flex;
+    	background-color: #fff;
+    	margin-bottom: 0.05rem;
+    }
+    .imgWorks{
+    	width: 1.9rem;
+    	height: 1.9rem;
+    	margin-right: 0.24rem;
+    }
+    .cardBoxShow .worksName{
+    	padding-top: 0.2rem;
+    	font-size: 0.26rem;
+    	color: #333;
+    	margin-bottom: 0.86rem;
+    }
+    .worksInfoAbout{
+    	margin-bottom: -0.03rem;
+    }
+    .worksInfoNum{
+    	font-size: 0.12rem;
+    	color: #bcbcbc;
+    }
+    /* 模态框 */
+    .b {
+        position: fixed;
+        top: 0;
+    }
+    #modal1 {
+      background: rgba(0,0,0,0.5);
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+    }
+    .a {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+    }
+    .bao {
+      width: 100%;
+      height: 100%;
+      display: table;
+    }
+    .bao span {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="frame">
+      <div class="navx">
+        <a href="personal-data.html"><img class="imgset" src="image/setting.png" alt=""></a>
+        <a href="upload-work.html"><img class="imgadd" src="image/add.png" alt=""></a>
+      </div>
+      <div class="clearBox"></div>
+
+      <div class="personMsg">
+        <img class="imgpersonhead" src="image/0.jpg" alt="">
+        <ul class="personInfo">
+          <li class="name">王二心</li>
+          <li class="info">
+            <a href="collected-qy.html"><span>50</span>
+            <span class="guanzhu">关注> </span></a>
+            <span>50</span>
+            <span>浏览量> </span>
+          </li>
+        </ul>
+      </div>
+      <!-- 选项卡 -->
+      <div class="cardBox">
+        <a class="item" href="personal.html">
+          <img src="image/personal_center.png" alt="">
+        </a>
+        <a class="item" href="evaluation.html">
+          <img src="image/note.png" alt="">
+        </a>
+        <a class="item" href="show9.html">
+          <img src="image/square.png" alt="">
+        </a>
+        <a class="item itemActive" href="show-horizontal.html">
+          <img src="image/more.png" alt="">
+        </a>
+      </div>
+      <!-- 选显卡show -->
+      <!-- 个人横版作品  -->
+  		<div class="cardBoxShow cardBoxActive cardBoxNoPadding ">
+  			<div class="works">
+  				<img class="imgWorks" src="image/0.jpg" alt="">
+  				<ul>
+  					<li class="worksName">海报 # 平面 # 排版</li>
+  					<li class="worksInfo">
+  						<img class="worksInfoAbout" src="image/collect.png" alt="">
+  						<span class="worksInfoNum">51</span>
+  					</li>
+  				</ul>
+  			</div>
+
+  			<div class="works">
+  				<img class="imgWorks" src="image/0.jpg" alt="">
+  				<ul>
+  					<li class="worksName">海报 # 平面 # 排版</li>
+  					<li class="worksInfo">
+  						<img class="worksInfoAbout" src="image/collect.png" alt="">
+  						<span class="worksInfoNum">51</span>
+  					</li>
+  				</ul>
+  			</div>
+
+  			<div class="works">
+  				<img class="imgWorks" src="image/0.jpg" alt="">
+  				<ul>
+  					<li class="worksName">海报 # 平面 # 排版</li>
+  					<li class="worksInfo">
+  						<img class="worksInfoAbout" src="image/collect.png" alt="">
+  						<span class="worksInfoNum">51</span>
+  					</li>
+  				</ul>
+  			</div>
+  		</div>
+      <!-- //模态框  -->
+      <div id="modal1" style="">
+        <div class="a">
+            <div class="bao">
+                <span><img src="image/0.jpg" style="width: 100%;"></span>
+            </div>
+        </div>
+      </div>
+  </body>
+</html>

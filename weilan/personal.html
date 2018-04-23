@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+  </head>
+  <script type="text/javascript" src="./js/font.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+  <script type="text/javascript">
+
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !important;
+    }
+    a{
+      text-decoration: none;
+    }
+    section{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+    }
+    .clearBox{clear:both;}
+    .frame{
+    	padding-top: 0.37rem;
+    }
+    /* 加号 设置 */
+    .navx{
+    	width: 100%-0.44rem;
+    	height: 0.22rem;
+    	padding-right: 0.44rem;
+    	margin-bottom: 0.34rem;
+    }
+    .imgadd,.imgset{
+    	width: 0.22rem;
+    	height: 0.22rem;
+    	float: right;
+    	margin-left:0.18rem;
+    }
+    /* 个人信息 */
+    .personMsg{
+    	height: 0.96rem;
+    	width: 100%-0.68rem;
+    	padding: 0rem 0rem 0.78rem 0.68rem;
+    	display: flex;
+    }
+    .imgpersonhead{
+    	display: block;
+    	width: 0.96rem;
+    	height: 0.96rem;
+    	border-radius: 50%;
+    	margin-right: 0.25rem;
+    }
+    .info span{
+      color: #2e2e2e;
+    }
+    .name{
+    	padding: 0.1rem 0rem 0.14rem 0rem;
+    	font-size: 0.26rem;
+    }
+    .guanzhu{
+    	display: inline-block;
+    	margin-right: 0.44rem;
+    }
+    /* 选显卡 控制卡 */
+    .cardBox{
+    	display: flex;
+    	justify-content: space-around;
+    	padding: 0px 0.5rem 0.17rem 0.5rem;
+    }
+    .item{
+    	display: block;
+    	width: 0.98rem;
+    	height: 0.5rem;
+    	border-radius: 5px;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    }
+    .item img{
+    	width: 0.26rem;
+    	height: 0.26rem;
+    }
+    .itemActive{
+    	background: #f2f2f2;
+    }
+    /* 选显卡 显示卡 */
+    /* 选项卡  个人页面*/
+    .cardBoxShow{
+    	display: none;
+    	background-color: #ececec;
+    	padding: 0.1rem 0.1rem 2rem 0.1rem;
+    }
+    .show0index{
+    	background-color: #fff;
+    	padding: 0.41rem 0rem 0.43rem 0.77rem;
+    	margin-bottom: 0.05rem;
+    }
+    .show0index ul li{
+    	margin-bottom: 0.16rem;
+    }
+    .showName{
+    	display: inline-block;
+    	width: 1.2rem;
+    	font-size: 0.16rem;
+    	color: #666;
+    }
+    .showVal{
+    	font-size: 0.16rem;
+    	color: #999;
+    }
+    .orange{
+    	color: #ffca11;
+    }
+    .show1index{
+    	background-color: #fff;
+    	padding: 0.37rem 0rem 0.4rem 0.77rem;
+    	margin-bottom: 0.05rem;
+    }
+    .show2index{
+    	background-color: #fff;
+    	padding: 0.41rem 0rem 1.33rem 0.77rem;
+    	margin-bottom: 0.05rem;
+    }
+    .cardBoxActive{
+    	display: block;
+    }
+    .show1index li{
+      margin-bottom: 0.16rem;
+      line-height:
+    }
+  </style>
+  <body>
+    <div class="frame">
+      <div class="navx">
+        <a href="personal-data.html"><img class="imgset" src="image/setting.png" alt=""></a>
+        <a href="upload-work.html"><img class="imgadd" src="image/add.png" alt=""></a>
+      </div>
+      <div class="clearBox"></div>
+
+      <div class="personMsg">
+        <img class="imgpersonhead" src="image/0.jpg" alt="">
+        <ul class="personInfo">
+          <li class="name">王二心</li>
+          <li class="info">
+            <a href="collected-qy.html"><span>50</span>
+            <span class="guanzhu">关注> </span></a>
+            <span>50</span>
+            <span>浏览量> </span>
+          </li>
+        </ul>
+      </div>
+      <!-- 选项卡 -->
+      <div class="cardBox">
+        <a class="item itemActive" href="personal.html">
+          <img src="image/personal_center.png" alt="">
+        </a>
+        <a class="item" href="evaluation.html">
+          <img src="image/note.png" alt="">
+        </a>
+        <a class="item" href="show9.html">
+          <img src="image/square.png" alt="">
+        </a>
+        <a class="item" href="show-horizontal.html">
+          <img src="image/more.png" alt="">
+        </a>
+      </div>
+      <!-- 选显卡show -->
+      <!-- 个人页面 -->
+      <div class="cardBoxShow cardBoxActive">
+        <div class="show0index">
+          <ul>
+            <li>
+              <span class="showName">性别/年龄</span>
+              <span class="showVal">女 22岁</span>
+            </li>
+            <li>
+              <span class="showName">胜任岗位</span>
+              <span class="showVal">平面设计</span>
+            </li>
+            <li>
+              <span class="showName">所在专业</span>
+              <span class="showVal">数字传媒</span>
+            </li>
+            <li>
+              <span class="showName">毕业院校</span>
+              <span class="showVal">中国传媒大学</span>
+            </li>
+          </ul>
+        </div>
+        <div class="show1index">
+          <ul>
+            <li>
+              <span class="showName">工作经历</span>
+              <span class="showVal">1 年</span>
+            </li>
+            <li>
+              <span class="showName orange">期望薪资</span>
+              <span class="showVal orange">8K-10K</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="show2index">
+        </div>
+      </div>
+  </body>
+</html>

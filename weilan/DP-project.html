@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+  </head>
+  <script type="text/javascript" src="./js/font.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+  <script type="text/javascript">
+
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !important;
+    }
+    li{
+      float: left;
+    }
+    section{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+    }
+    a{
+      text-decoration: none;
+    }
+    .clear{
+      clear: both;
+    }
+    /* notice */
+    .notice{
+      height: 0.46rem;
+      background: #F6F6F6;
+      line-height: 0.46rem;
+    }
+    .noticeMSG{
+      width: 3.5rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .notice span{
+      display: block;
+      float: left;
+      font-size: 0.2rem;
+    }
+    /* add & setting */
+    .add{
+      position: absolute;
+      right: 0.8rem;
+      top: 0.7rem;
+      width: 0.2rem;
+      height: 0.2rem;
+    }
+    .setting{
+      position: absolute;
+      right: 0.4rem;
+      top: 0.7rem;
+      width: 0.2rem;
+      height: 0.2rem;
+    }
+    /* enterprise-title */
+    .enterprise-title{
+      margin-top: 0.7rem;
+      height: 1rem;
+      /* padding: 0.1rem 0.6rem;; */
+      position: relative;
+    }
+    .companyImg{
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      left: 0.6rem;;
+      top:0;
+    }
+    .companyName{
+      font-size: 0.25rem;
+      position: absolute;
+      left: 1.75rem;
+      top: 0.1rem;
+      width: 4rem;
+      white-space:nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .check{
+      width: 0.144rem;
+      height: 0.14rem;
+      position: absolute;
+      left: 1.82rem;
+      top: 0.8rem;
+    }
+    .renZheng{
+      font-size: 0.14rem;
+      color: #7E7F7F;
+      position: absolute;
+      left: 2.06rem;
+      top: 0.78rem;
+    }
+    .companyNav{
+      height: 1rem;
+    }
+    .companyNav li{
+      width: 1rem;
+      height: 0.5rem;
+      font-size: 0.18rem;
+      line-height: 0.5rem;
+      text-align: center;
+      margin: 0.25rem 0.2rem;
+      color: #1C1C1C;
+    }
+    .companyNav ul{
+      height: 1rem;
+      margin: 0 0.4rem;
+    }
+    .companyNav .active{
+      background: #F2F2F2;
+    }
+    /* companyContent */
+    .companyContent{
+      border: 0.12rem solid #ECECEC;
+    }
+    .swiper-container{
+      width: 6rem;
+      height: 3rem;
+      margin-bottom: 0.6rem;
+    }
+    .companyContent p{
+      font-size: 0.16rem;
+      line-height: 0.5rem;
+      color: #202020;
+      margin: 0.5rem 0.3rem 0.24rem 0.3rem;;
+      text-indent: 2em;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+      width: 0.14rem;
+      height: 0.14rem;
+      border: 0.02rem solid #FFFFFF;
+      opacity: 0.5;
+      background: none;
+      margin: 0 0.11rem;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active{
+      background: #FFFFFF;
+      opacity: 1;
+    }
+    .guanZhu{
+      position: absolute;
+      left: 3.6rem;
+      top: 0.78rem;
+      color: #7E7F7F;
+      font-size: 0.16rem;
+    }
+    .liuLan{
+      position: absolute;
+      left: 4.6rem;
+      top: 0.78rem;
+      color: #7E7F7F;
+      font-size: 0.16rem;
+    }
+  </style>
+  <body>
+    <section>
+      <div class="notice">
+        <span style="margin-left:1.12rem;">重要通知：</span>
+        <span class="noticeMSG">现招聘设计5人 视频剪辑5人 工作地点北京</span>
+      </div>
+      <section>
+        <a href="cp-post.html"><div class="add"><img src="./image/add.png" alt=""></div></a>
+        <a href="cp-set.html"><div class="setting"><img src="./image/setting.png" alt=""></div></a>
+      </section>
+      <section>
+        <div class="enterprise-title">
+          <div class="companyImg"><img src="./image/company.jpg" alt=""></div>
+          <div class="companyName">北京水晶石数字科技股份有限公司</div>
+          <div class="check"><img src="./image/check.png" alt=""></div>
+          <div class="renZheng">平台实名认证</div>
+          <a href="collected-works.html"><span class="guanZhu">50&nbsp;关注&nbsp;></span></a>
+          <a href=""><span class="liuLan">50&nbsp;浏览量&nbsp;></span></a>
+        </div>
+        <section>
+          <div class="companyNav">
+            <ul>
+              <a href="companyDP.html"><li>公司简介</li></a>
+              <a href="DP-project.html"><li class="active">重点项目</li></a>
+              <a href="DP-position.html"><li>职位需求</li></a>
+              <a href="DP-contact.html"><li>联系</li></a>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="companyContent">
+            <p>水晶石数字教育学院是北京市水晶石技术有限公司旗下的专业教育培训机构。水晶石 教育以“实战教学、实用教学、实时教学”为理念，面向个人及机构提供志业数字艺术教 育服务</p>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./image/enterprise_banner.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/enterprise_banner.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/enterprise_banner.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/enterprise_banner.jpg" alt=""></div>
+              </div>
+              <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <script src="js/swiper.min.js"></script>
+    <script>
+      var mySwiper = new Swiper ('.swiper-container', {
+        autoplay: {
+          delay: 3000,
+          stopOnLastSlide: false,
+          disableOnInteraction: true,
+        },
+        //可选选项，自动滑动
+        loop: true,
+
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        }
+      })
+  </script>
+  </body>
+</html>

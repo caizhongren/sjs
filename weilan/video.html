@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+  </head>
+  <script type="text/javascript" src="./js/font.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      console.log(1);
+      $('.videoPlay .model').each(function(index){
+        $(this).click(function(){
+          $('.videoPlay .model').css({display:'block'});
+          let abcd=$('.videoPlay video');
+          $('.videoPlay video').each(function(index){
+            abcd[index].pause();
+          });
+          abcd[index].play();
+          $(this).css({display:'none'});
+        });
+      });
+      $('.videoPlay video').each(function(index){
+        $(this).click(function(){
+          $(this)[0].pause();
+          $('.videoPlay .model').eq(index).show();
+        });
+        // console.log($('.videoPlay video').eq(index).attr('duration'));
+        // var x=QueryString('video');
+        // console.log($('.videoPlay video').get(0).duration);
+        // console.log(parseInt(str));
+
+        // $('.itemTag').eq(index).attr('abc',str);
+
+      });
+    });
+    // getTime($('#video'));
+    // // <!--获取mp3文件的时间 兼容浏览器-->
+    // function getTime(this) {
+    //     setTimeout(function () {
+    //         var duration = this[0].duration;
+    //         if(isNaN(duration)){
+    //             getTime(this);
+    //         }
+    //         else{
+    //             console.info("该歌曲的总时间为："+ this[0].duration+"秒")
+    //         }
+    //     }, 10);
+    // }
+// ----------------------------------------------------------------------------------
+// $(function () {
+//             $("#test").change(function () {
+//                 var objUrl = getObjectURL(this.files[0]);
+//                 $("#audio").attr("src", objUrl);
+//                 $("#audio")[0].play();
+//                 $("#audio").show();
+//                 getTime();
+//             });
+//         });
+//         // <!--获取mp3文件的时间 兼容浏览器-->
+//         function getTime() {
+//             setTimeout(function () {
+//                 var duration = $("#audio")[0].duration;
+//                 if(isNaN(duration)){
+//                     getTime();
+//                 }
+//                 else{
+//                     console.info("该歌曲的总时间为："+$("#audio")[0].duration+"秒")
+//                 }
+//             }, 10);
+//         }
+//         // <!--把文件转换成可读URL-->
+//         function getObjectURL(file) {
+//             var url = null;
+//             if (window.createObjectURL != undefined) { // basic
+//                 url = window.createObjectURL(file);
+//             } else if (window.URL != undefined) { // mozilla(firefox)
+//                 url = window.URL.createObjectURL(file);
+//             } else if (window.webkitURL != undefined) { // webkit or chrome
+//                 url = window.webkitURL.createObjectURL(file);
+//             }
+//             return url;
+//         }
+    // ------------------------------------------------------------------------------------
+    // window.onload=function(){
+    //   var vBox=document.getElementsByTagName('video');
+    //   var aItemTag=document.getElementsByClassName('itemTag');
+    //   // console.log(aItemTag[0].innerHTML);
+    //   // console.log(vBox[0].duration);
+    //   // aItemTag[0].innerHTML=vBox[0].duration;
+    //   // for(var )
+    // }
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !important;
+    }
+    body{
+      background:#010101;
+    }
+    .clear{
+      clear: both;
+    }
+    li{
+      float: left;
+    }
+    section{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+    }
+    .videoPlay{
+      height: 3.6rem;
+      position: relative;
+    }
+    .videoPlay img{
+      position: absolute;
+      height: 3.6rem;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+    .itemAuthor img{
+      width: 0.6rem;
+      height: 0.6rem;
+    }
+    .model{
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+    .model img{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0.8rem;
+      height: 0.8rem;
+      margin-left: -0.4rem;
+      margin-top: -0.4rem;
+    }
+    .itemTitle{
+      font-size: 0.22rem;
+      color: #dfdfdf;
+      margin-left: 0.25rem;
+      margin-top: 0.3rem;
+      margin-bottom: 0.2rem;
+    }
+    .itemTag{
+      color: #868686;
+      margin: 0 0 0.15rem 0.25rem;
+    }
+    .itemAuthor{
+      margin: 0 0 0 0.25rem;
+    }
+    .itemAuthor img{
+      display: block;
+      float: left;
+      border-radius: 50%;
+    }
+    .itemAuthor span{
+      display: block;
+      float: left;
+      color: #FFFFFF;
+      font-size: 0.24rem;
+      line-height: 0.6rem;
+      margin-left: 0.24rem;
+    }
+    .videoItem{
+      margin-bottom: 0.3rem;
+    }
+  </style>
+  <body>
+    <section>
+      <div class="videoList">
+        <div class="videoItem">
+          <div class="videoPlay">
+            <div class="model">
+              <img src="./image/video.png" alt="">
+            </div>
+            <video id="video" style="height:3.6rem;">
+              <source src="mov_bbb.mp4" type="video/mp4">
+            </video>
+
+          </div>
+          <div class="videoMsg">
+             <div class="itemTitle">
+              女神盖尔加朵为华为拍摄的广告
+             </div>
+             <div class="itemTag">
+               #精选｜0'37"
+             </div>
+             <div class="itemAuthor">
+               <img src="./image/0.jpg" alt="">
+               <span>小新</span>
+               <div class="clear"></div>
+             </div>
+          </div>
+        </div>
+        <div class="videoItem">
+          <div class="videoPlay">
+            <div class="model">
+              <img src="./image/video.png" alt="">
+            </div>
+            <video style="height:3.6rem;" poster="image/video.png">
+              <source src="mov_bbb.mp4" type="video/mp4">
+            </video>
+
+          </div>
+          <div class="videoMsg">
+             <div class="itemTitle">
+              女神盖尔加朵为华为拍摄的广告
+             </div>
+             <div class="itemTag">
+               #精选｜0'37"
+             </div>
+             <div class="itemAuthor">
+               <img src="./image/0.jpg" alt="">
+               <span>小新</span>
+               <div class="clear"></div>
+             </div>
+          </div>
+        </div>
+        <div class="videoItem">
+          <div class="videoPlay">
+            <div class="model">
+              <img src="./image/video.png" alt="">
+            </div>
+            <video style="height:3.6rem;">
+              <source src="mov_bbb.mp4" type="video/mp4">
+            </video>
+
+          </div>
+          <div class="videoMsg">
+             <div class="itemTitle">
+              女神盖尔加朵为华为拍摄的广告
+             </div>
+             <div class="itemTag">
+               #精选｜0'37"
+             </div>
+             <div class="itemAuthor">
+               <img src="./image/0.jpg" alt="">
+               <span>小新</span>
+               <div class="clear"></div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

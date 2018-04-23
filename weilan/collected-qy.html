@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+  </head>
+  <script type="text/javascript" src="./js/font.js"></script>
+  <!-- <script type="text/javascript" src="./js/jquery-3.1.1.js"></script> -->
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !important;
+    }
+    section{
+      width: 100%;
+    }
+    body{
+      background:  #ececec;
+    }
+    img{
+      width: 100%;
+    }
+    .box{
+      background: #ececec;
+      padding: 0.3rem 0.1rem;
+    }
+    .item{
+      height: 1.4rem;
+      background: #FFFFFF;
+      margin-bottom: 0.1rem;
+      padding:0 0.2rem;
+      position: relative;
+      transform: translateX(0px);
+      transition: all 0.2s;
+      color: #313030;
+    }
+    .cp-item{
+      height: 100%;
+      position: relative;
+      color: #313030;
+    }
+    .itemImg{
+      width: 0.6rem;
+      height: 0.6rem;
+      position: absolute;
+      left: 0.24rem;
+      top: 0.36rem;
+    }
+    .cpName{
+      font-size: 0.18rem;
+      line-height: 0.22rem;
+      position: absolute;
+      left: 0.9rem;
+      top: 0.48rem;
+    }
+    .cpMSg{
+      font-size:0.14rem;
+      position:absolute;
+      top: 0.7rem;
+      left:0.9rem;
+    }
+    .delete{
+      width:10%;
+      height: 100%;
+      position: absolute;
+      right: -10%;
+      top: 0;
+    }
+    .delete img{
+      width: 100%;
+      height: 100%;
+    }
+    .list-ul{
+      overflow: hidden;
+    }
+  </style>
+  <body>
+  <section>
+    <div class="box">
+      <ul class="list-ul">
+        <li class="item">
+          <a href="companyDP.html">
+          <div class="cp-item">
+            <div class="itemImg"><img src="./image/enterpriseImg.jpg" alt=""></div>
+            <div class="cpName">百度糯米科技股份有限公司</div>
+            <div class="cpMSg"><span>上市公司1000人</span>&nbsp;<span>数字科技</span></div>
+
+          </div>
+          </a>
+          <div class="delete"><img src="./image/delete.jpg" alt=""></div>
+        </li>
+          <li class="item">
+            <a href="companyDP.html">
+            <div class="cp-item">
+              <div class="itemImg"><img src="./image/enterpriseImg.jpg" alt=""></div>
+              <div class="cpName">百度糯米科技股份有限公司</div>
+              <div class="cpMSg"><span>上市公司1000人</span>&nbsp;<span>数字科技</span></div>
+
+            </div>
+            </a>
+            <div class="delete"><img src="./image/delete.jpg" alt=""></div>
+          </li>
+      </ul>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+  <script type="text/javascript" src="./js/zepto.touchWipe.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('.cp-item').on('click',function(){
+        alert(1);
+      })
+      $('.item').touchWipe({itemDelete: '.delete'});
+      // $('.cp-item').on('click',function(e){
+      //   alert(1);
+      // })
+      $('.delete').on('click',function(e){
+        alert(1);
+      })
+    });
+  </script>
+  </body>
+</html>

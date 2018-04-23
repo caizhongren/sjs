@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+  </head>
+  <script type="text/javascript" src="./js/font.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    var preview = document.querySelector('#preview');
+    var eleFile = document.querySelector('#file');
+    eleFile.addEventListener('change', function() {
+        var file = this.files[0];
+        // 确认选择的文件是图片
+        if(file.type.indexOf("image") == 0) {
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function(e) {
+                // 图片base64化
+                var newUrl = this.result;
+                preview.style.backgroundImage = 'url(' + newUrl + ')';
+            };
+        }
+    });
+  });
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !important;
+    }
+    li{
+      float: left;
+    }
+    section{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+    }
+    body{
+      background:  #ECECEC ;
+    }
+    .h{
+      height: 0.8rem;
+      line-height: 0.8rem;
+      background: #FFFFFF;
+      padding-left: 0.45rem;
+      color: #2F2E2E;
+      font-size: 0.2rem;
+    }
+    .introduce{
+      background: #FFFFFF;
+    }
+    textarea{
+      display: block;
+      width: 5.6rem;
+      height: 2rem;
+      margin: auto;
+    }
+    #preview {
+        display: block;
+        width: 6rem;
+        height: 3rem;
+        position: relative;
+        background-image: url(./image/enterprise_banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* margin-top: 0.3rem;
+        margin-left: 0.2rem;
+        margin-bottom: 0.2rem; */
+        line-height: 3rem;
+        margin: 0.3rem auto;
+        text-align: center;
+    }
+    #file {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+        z-index: 5;
+    }
+    .tips{
+      display:block;
+      margin: 0 auto;
+      color: #909090;
+      font-size: 0.22rem;
+      text-align: center;
+    }
+    .submit{
+      width: 1.5rem;
+      height: 0.6rem;
+      background: #FF9E21;
+      color: #FFFFFF;
+      font-size: 0.25rem;
+      line-height: 0.6rem;
+      text-align: center;
+      margin: 0.5rem auto;
+    }
+    a{
+      text-decoration: none;
+    }
+  </style>
+  <body>
+  <section>
+    <div class="forDetail">
+      <div class="h">项目简介</div>
+      <div class="introduce"><textarea></textarea></div>
+      <div class="h">上传项目图片</div>
+    </div>
+    <div id="preview">
+        <input type="file" accept="image/*" id="file" value="" />
+    </div>
+    <!-- <div class="setType">头像<input type="button" value="点击上传" class="submitBtn"></div></div> -->
+    <span class="tips">(点击图片上传)</span>
+    <a href="DP-project.html"><div class="submit">提交</div></a>
+  </section>
+  </body>
+</html>

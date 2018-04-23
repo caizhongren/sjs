@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+  </head>
+  <script type="text/javascript" src="./js/font.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+  <script type="text/javascript">
+
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !important;
+    }
+    li{
+      float: left;
+    }
+    section{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+    }
+    a{
+      text-decoration: none;
+    }
+    .clear{
+      clear: both;
+    }
+    /* notice */
+    .notice{
+      height: 0.46rem;
+      background: #F6F6F6;
+      line-height: 0.46rem;
+    }
+    .noticeMSG{
+      /* display: inline-block; */
+      width: 3.5rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .notice span{
+      display: block;
+      float: left;
+      font-size: 0.2rem;
+    }
+    /* add & setting */
+    .add{
+      position: absolute;
+      right: 0.8rem;
+      top: 0.7rem;
+      width: 0.2rem;
+      height: 0.2rem;
+    }
+    .setting{
+      position: absolute;
+      right: 0.4rem;
+      top: 0.7rem;
+      width: 0.2rem;
+      height: 0.2rem;
+    }
+    /* enterprise-title */
+    .enterprise-title{
+      margin-top: 0.7rem;
+      height: 1rem;
+      /* padding: 0.1rem 0.6rem;; */
+      position: relative;
+    }
+    .companyImg{
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      left: 0.6rem;;
+      top:0;
+    }
+    .companyName{
+      font-size: 0.25rem;
+      position: absolute;
+      left: 1.75rem;
+      top: 0.1rem;
+      width: 4rem;
+      white-space:nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .check{
+      width: 0.144rem;
+      height: 0.14rem;
+      position: absolute;
+      left: 1.82rem;
+      top: 0.8rem;
+    }
+    .renZheng{
+      font-size: 0.14rem;
+      color: #7E7F7F;
+      position: absolute;
+      left: 2.06rem;
+      top: 0.78rem;
+    }
+    .companyNav{
+      height: 1rem;
+    }
+    .companyNav li{
+      width: 1rem;
+      height: 0.5rem;
+      font-size: 0.18rem;
+      line-height: 0.5rem;
+      text-align: center;
+      margin: 0.25rem 0.2rem;
+      color: #1C1C1C;
+    }
+    .companyNav ul{
+      height: 1rem;
+      margin: 0 0.4rem;
+    }
+    .companyNav .active{
+      background: #F2F2F2;
+    }
+    /* companyContent */
+    .companyContent{
+      border: 0.12rem solid #ECECEC;
+    }
+    .jobNumber{
+      padding: 0.2rem 0.25rem;
+      font-size: 0.15rem;
+      color: #202020;
+      margin-bottom: 0.2rem;
+    }
+    .jobNumber span{
+      line-height: 0.26rem;
+    }
+    hr{
+      width: 100%;
+      background:  #ECECEC ;
+      height: 0.06rem;
+      border: none;
+    }
+    .jobNumber h{
+      font-size: 0.24rem;
+      margin-bottom: 0.18rem;
+      display: block;
+    }
+    .jobNumber div{
+      margin: 0.15rem 0;
+    }
+    .status{
+      height: 0.4rem;
+    }
+    .status span{
+      display: block;
+      float: right;
+      line-height: 0.4rem;
+      color: #8D8B8B;
+    }
+    .clear{
+      clear: both;
+    }
+    .welfare span{
+      display: inline-block;
+      height: 0.26rem;
+      width: 0.8rem;
+      text-align: center;
+      background: #ECECEC;
+      margin-right: 0.06rem;
+    }
+    .guanZhu{
+      position: absolute;
+      left: 3.6rem;
+      top: 0.78rem;
+      color: #7E7F7F;
+      font-size: 0.16rem;
+    }
+    .liuLan{
+      position: absolute;
+      left: 4.6rem;
+      top: 0.78rem;
+      color: #7E7F7F;
+      font-size: 0.16rem;
+    }
+  </style>
+  <body>
+    <section>
+      <div class="notice">
+        <span style="margin-left:1.12rem;">重要通知：</span>
+        <span class="noticeMSG">现招聘设计5人 视频剪辑5人 工作地点北京</span>
+      </div>
+      <section>
+        <a href="cp-post.html"><div class="add"><img src="./image/add.png" alt=""></div></a>
+        <a href="cp-set.html"><div class="setting"><img src="./image/setting.png" alt=""></div></a>
+      </section>
+      <section>
+        <div class="enterprise-title">
+          <div class="companyImg"><img src="./image/company.jpg" alt=""></div>
+          <div class="companyName">北京水晶石数字科技股份有限公司</div>
+          <div class="check"><img src="./image/check.png" alt=""></div>
+          <div class="renZheng">平台实名认证</div>
+          <a href="collected-works.html"><span class="guanZhu">50&nbsp;关注&nbsp;></span></a>
+          <a href=""><span class="liuLan">50&nbsp;浏览量&nbsp;></span></a>
+        </div>
+        <section>
+          <div class="companyNav">
+            <ul>
+              <a href="companyDP.html"><li>公司简介</li></a>
+              <a href="DP-project.html"><li>重点项目</li></a>
+              <a href="DP-position.html"><li class="active">职位需求</li></a>
+              <a href="DP-contact.html"><li>联系</li></a>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="companyContent">
+            <div class="jobNumber">
+              <h>网站设计</h>
+              <div>大专/全职</div>
+              <div style="color:#F94E02;">8k-15k</div>
+              <div class="status"><span>10人</span><span>已申请：</span><span style="margin-right: 0.42rem;-">2018-01-27</span></div>
+              <div class="clear"></div>
+              <hr>
+              <div>职位：<span>平面设计</span></div>
+              <div>要求：<span>精通PS AI等相关软件</span></div>
+              <div class="welfare">福利：<span>五险一金</span><span>交通补助</span></div>
+              <hr>
+              <div>工作内容： <span>设计网站 排版 P图 网站banner</span></div>
+              <div>工作时间： <span>早9晚6</span></div>
+            </div>
+            <hr style="height:0.2rem;">
+
+          </div>
+        </section>
+      </section>
+    </section>
+  </body>
+</html>

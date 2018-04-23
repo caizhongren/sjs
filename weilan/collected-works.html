@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+  </head>
+  <script type="text/javascript" src="./js/font.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var imgsurl=[];
+      var nowurl='';
+      var imgObj=$(".writing>img");
+      for(var i=0;i<imgObj.length;i++){
+          imgsurl[i]=imgObj[i].src;
+          imgObj[i].onclick=function(){
+              nowurl=this.src;
+              console.log(nowurl);
+              wx.previewImage({
+                  current: nowurl,
+                  urls: imgsurl
+              });
+          }
+      }
+    });
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !important;
+    }
+    body{
+      background: #ececec;
+    }
+    section{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .authorShow{
+      width: 100%;
+      margin: 0.2rem 2.8%;
+    }
+    .auhtorItem{
+      height: 4.43rem;
+      float: left;
+      width: 43.75%;
+      float: left;
+      background: #FFFFFF;
+      margin: 1.25%;
+    }
+    .writing{
+      width: 100%;
+      height: 3.21rem;
+    }
+    .itemDetail{
+      width: 100%;
+      height: 1.21rem;
+      position: relative;
+
+    }
+    .authorTX{
+      width: 0.4rem;
+      height: 0.4rem;
+      position: absolute;
+      left: 0.15rem;
+      top: 0.15rem;
+      border-radius: 50%;
+    }
+    .authorXM{
+      position: absolute;
+      left: 0.64rem;
+      top: 0.25rem;
+      font-size: 0.18rem;
+      color: #1B1A1F;
+    }
+    .trash{
+    width: 0.24rem;
+    height: 0.26rem;
+    position: absolute;
+    right: 0.31rem;
+    top: 0.22rem;
+  }
+  .writing>img{
+    display: block;
+  }
+  .writing span{
+    font-size: 0.14rem;
+    color: #1B1A1F;
+    padding: 0.1rem 0.2rem;
+    display: block;
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+  }
+  </style>
+  <body>
+    <section>
+      <div class="authorShow">
+        <ul>
+          <li class="auhtorItem">
+            <div class="writing">
+              <img src="./image/enterprise_banner.jpg" alt="">
+              <div class="itemDetail">
+                <a href="show-horizontal.html"><img src="./image/company.jpg" class="authorTX" alt="">
+                <div class="authorXM">王馨漪</div></a>
+                <img src="./image/trash.png" class="trash" alt="">
+                <a href="show-horizontal.html"><span>海报 香港小胡同bibibi 大街上让你走走走~~~~</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="auhtorItem">
+            <div class="writing">
+              <img src="./image/enterprise_banner.jpg" alt="">
+              <div class="itemDetail">
+                <a href="show-horizontal.html"><img src="./image/company.jpg" class="authorTX" alt="">
+                <div class="authorXM">王馨漪</div></a>
+                <img src="./image/trash.png" class="trash" alt="">
+                <a href="show-horizontal.html"><span>海报 香港小胡同bibibi 大街上让你走走走~~~~</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="auhtorItem">
+            <div class="writing">
+              <img src="./image/enterprise_banner.jpg" alt="">
+              <div class="itemDetail">
+                <a href="show-horizontal.html"><img src="./image/company.jpg" class="authorTX" alt="">
+                <div class="authorXM">王馨漪</div></a>
+                <img src="./image/trash.png" class="trash" alt="">
+                <a href="show-horizontal.html"><span>海报 香港小胡同bibibi 大街上让你走走走~~~~</span></a>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

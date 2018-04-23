@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+  </head>
+  <script type="text/javascript" src="./js/font.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+  <script type="text/javascript">
+
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !important;
+    }
+    li{
+      float: left;
+    }
+    body{
+      background:#ECECEC;
+
+    }
+    section{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+    }
+    /* tool */
+    .tool{
+      height: 0.7rem;
+      background: #FFFFFF;
+    }
+    .detail{
+      float:right;
+      width: 0.4rem;
+      height: 0.3rem;
+      margin: 0.2rem;
+    }
+    .search{
+      float: right;
+      width: 0.3rem;
+      height: 0.3rem;
+      margin-top:0.17rem;
+    }
+    /* 导航栏 */
+    .jobNav{
+      height: 0.4rem;
+      padding: 0.2rem;
+      font-size: 0.25rem;
+    }
+    .enterpriseNav{
+      height: 0.26rem;
+      line-height: 0.26rem;
+      text-align: center;
+      padding: 0.07rem 0.2rem;
+      font-size: 0.25rem;
+      background: #E0E0E0;
+      margin-right: 0.15rem;
+      border-radius: 1rem;
+      color: #1B1A1F;
+    }
+    .enterpriseNav.active{
+      background:  #B4B4B4;
+      font-weight: 500;
+    }
+    /* 招聘信息 */
+    .content-enterprise{
+      padding: 0 0.1rem;
+    }
+    .item{
+      background: #FFFFFF;
+      height: 1.8rem;
+      position: relative;
+      margin-bottom: 0.11rem;
+    }
+    .item div{
+      position: absolute;
+    }
+    .item-name{
+      font-size: 0.28rem;
+      left: 0.28rem;
+      top: 0.2rem;
+      color: #323232;
+    }
+    .item-headImg{
+      background: #CCC;
+      width: 0.6rem;
+      height: 0.6rem;
+      top: 0.96rem;
+      left: 0.27rem;
+    }
+    .item-salary{
+      right:0.55rem;
+      top: 0.28rem;
+      color:#F20000;
+      font-size: 0.16rem;
+    }
+    .item-date{
+      color: #484848;
+      font-size: 0.14rem;
+      right:0.55rem;
+      top: 0.48rem;
+    }
+    .item-enterpriseName{
+      font-size: 0.18rem;
+      left: 0.96rem;
+      top: 1.14rem;
+      color: #686868;
+      width: 4rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .item-scale{
+      font-size: 0.14rem;
+      left: 0.95rem;
+      top: 1.4rem;
+      color: #606060;
+      width: 4rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .twoMsg{
+      height: 0.16rem;
+      width: 3rem;
+      left: 0.31rem;
+      top: 0.62rem;
+      color: #EE0000;
+      font-size: 0.16rem;
+      line-height: 0.16rem;
+    }
+    .twoMsg img{
+      float: left;
+    }
+    .twoMsg span{
+      float: left;
+      display: block;
+      margin-left: 0.05rem;
+      margin-right: 0.14rem;
+    }
+  </style>
+  <body>
+    <!-- 工具栏 -->
+    <section>
+      <div class="tool">
+        <a href="log.html"><div class="detail"><img src="./image/show.png" alt=""></div></a>
+        <a href="qiyeSearch.html"><div class="search"><img src="./image/search.png" alt=""></div></a>
+      </div>
+    </section>
+    <!-- 导航栏 -->
+    <section>
+      <div class="jobNav">
+        <ul>
+          <a href="qiye.html"><li class="enterpriseNav active">全部</li></a>
+          <a href="post.html"><li class="enterpriseNav">岗位招聘</li></a>
+          <a href="project.html"><li class="enterpriseNav">项目招聘</li></a>
+        </ul>
+      </div>
+    </section>
+    <!-- 招聘信息 -->
+    <section>
+      <div class="content-enterprise">
+        <a href="DP-position.html"><div class="item">
+          <div class="item-name">场景建模设计师</div>
+          <div class="twoMsg">
+            <img src="./image/tag.png" style="width:0.15rem;" alt="">
+            <span class="item-tag">ps max</span>
+            <img src="./image/place.png" style="width:0.1rem;" alt="">
+            <span class="item-place">北京</span>
+          </div>
+          <div class="item-headImg"><img src="./image/enterpriseImg.jpg" alt=""></div>
+          <div class="item-salary">8-15k</div>
+          <div class="item-date">1月15日</div>
+          <div class="item-enterpriseName">北京水晶石数字科技股份有限公司</div>
+          <div class="item-scale">上市公司1000人 数字科技</div>
+        </div></a>
+        <a href="DP-position.html"><div class="item">
+          <div class="item-name">场景建模设计师</div>
+          <div class="twoMsg">
+            <img src="./image/tag.png" style="width:0.15rem;" alt="">
+            <span class="item-tag">ps max</span>
+            <img src="./image/place.png" style="width:0.1rem;" alt="">
+            <span class="item-place">北京</span>
+          </div>
+          <div class="item-headImg"><img src="./image/enterpriseImg.jpg" alt=""></div>
+          <div class="item-salary">8-15k</div>
+          <div class="item-date">1月15日</div>
+          <div class="item-enterpriseName">北京水晶石数字科技股份有限公司</div>
+          <div class="item-scale">上市公司1000人 数字科技</div>
+        </div></a>
+      </div>
+    </section>
+  </body>
+</html>
